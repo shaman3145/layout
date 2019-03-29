@@ -66,12 +66,12 @@ html, body{
 	font-size: 16px;
 
 }
-.make_order{
+.make-order{
 	display: flex;
 	position: relative;
 	margin: 0 auto;
-	min-width: 300px;
-	width: 0px;
+	min-width: 270px;
+	max-width: 400px;
 	height: 350px;
 	font-size: 13px;
 	z-index: 2;
@@ -83,7 +83,7 @@ html, body{
 	align-items: center;
 	margin-top: 18vh;
 }
-.make_order input{
+.make-order input{
 	border: none;
 	border-radius: 5px;
 	height: 30px;
@@ -134,7 +134,16 @@ html, body{
 .heder-menu_visible a{
 	text-decoration:  none;
 	color: white;
+	cursor: pointer;
+	display: block;
+	padding: 10px 0;
+	border-bottom: 2px solid white;
 }
+.heder-menu_visible a:hover{
+	color: orange;
+	border-bottom: 2px solid orange;
+}
+
 .heder-menu_visible{
 	box-shadow: 0 7px 5px black;
 	width: 242px;
@@ -145,10 +154,6 @@ html, body{
 	position: absolute;
 	background: linear-gradient(to right top, #ff885f, #ff2f96 );
 	z-index: 2;
-}
-.heder-menu_visible div{
-	padding: 10px 0;
-	border-bottom: 2px solid white;
 }
 .right-infa{
 	display: flex;
@@ -274,13 +279,28 @@ html, body{
 	position: absolute;
 	transform: rotate(35deg);
 	left: 83%;
-   top: 50%;;
+    top: 290px;
 }
 .decor-3{
 	position: absolute;
 	transform: rotate(300deg);
 	 left: 7%;
     top: 266px;
+}
+.decor-4{
+	position: absolute;
+	left: 68%;
+	top: 110px;
+}
+.decor-5{
+	position: absolute;
+	left: 38%;
+	top: 10px;
+}
+.decor-6{
+	position: absolute;
+	left: 8%;
+	top: 283px;
 }
 .decor-top{
 	position: absolute;
@@ -357,12 +377,12 @@ h2{
 }
  .slick-dots li button:before
     {
-        font-size: 20px;
-        line-height: 20px;
-        background-color: #ff4e2e;
-        border-radius: 50%; 
-        display: none;
-        font-size: 0 !important;    
+    font-size: 20px;
+    line-height: 20px;
+    background-color: #ff4e2e;
+    border-radius: 50%; 
+    display: none;
+    font-size: 0 !important;    
     }
 .general_button{
 	width: 270px;
@@ -735,6 +755,11 @@ h3{
 	}
 	.copyrigth{
 		margin-top: 0px;
+	}
+}
+@media(max-width: 410px){
+	.make-order{
+		margin: 25% 10px;
 	}
 }
 @media(max-width: 374px){

@@ -48,7 +48,7 @@ $('.meddle_column__exampels').slick({
 
 	});
 	const disableScroll = function(){
-		$('html, body').on('wheel', function(){
+		$('html, body').on('WheelEvent.deltaY ', function(){
 		return false;
 		});
 	}
@@ -57,38 +57,26 @@ $('.meddle_column__exampels').slick({
 		$('html, body').off('wheel');
 	}
 
-	$('html').on('click',
+	$('html, body').on('click',
 		'.call, .right-infa_phone-heder, .top-column__person-data_button, .meddle_column__button, .general_button, .footer-button', 
 		function(){
 		$('input').val('')
 		$('.number-phone').val('+7')
-		$('.form-container').fadeIn(400, disableScroll)
-		$('.make_order').animate({
-			width: '300px',
-			height: '350px'
-		},400);
+		$('.form-container').fadeIn({start: disableScroll, duration: 400})
 
 	});
 	
 	$('.form-container__button').on('click', function(){
 		$('input').val('')
 		$('.number-phone').val('+7')
-		$('.form-container').fadeOut(400, enableScroll)
-		$('.make_order').animate({
-			width: '0',
-		},400);
+		$('.form-container').fadeOut({start: enableScroll, duration: 400})
 	});
 
 	$('.form-container').click(function(event){
 		if(event.target == this){
-			$(this).fadeOut(400, enableScroll)
-			$('.make_order').animate({
-			width: '0',
+			$(this).fadeOut({start: enableScroll, duration: 400})
 
-			},400);
 		}
 	});
-
-	 
 });
 

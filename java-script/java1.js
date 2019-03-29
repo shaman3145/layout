@@ -48,13 +48,13 @@ $('.meddle_column__exampels').slick({
 
 	});
 	const disableScroll = function(){
-		$('html, body').on('WheelEvent.deltaY ', function(){
+		$('html').on('wheel', function(){
 		return false;
 		});
 	}
 
 	const enableScroll = function(){
-		$('html, body').off('wheel');
+		$('html').off('wheel');
 	}
 
 	$('html, body').on('click',

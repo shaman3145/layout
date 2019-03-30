@@ -61,14 +61,14 @@ $('.meddle_column__exampels').slick({
 		'.call, .right-infa_phone-heder, .top-column__person-data_button, .meddle_column__button, .general_button, .footer-button', 
 		function(){
 		$('input').val('')
-		$('.number-phone').val('+7')
+		$('.number-phone').val('8')
 		$('.form-container').fadeIn({start: disableScroll, duration: 400})
 
 	});
 	
 	$('.form-container__button').on('click', function(){
 		$('input').val('')
-		$('.number-phone').val('+7')
+		$('.number-phone').val('8')
 		$('.form-container').fadeOut({start: enableScroll, duration: 400})
 	});
 

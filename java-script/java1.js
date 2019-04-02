@@ -47,6 +47,10 @@ $('.meddle_column__exampels').slick({
 		}
 
 	});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0cc58f0c7f5a3297ea8d04c076bd3664a734ea43
 	function OffScroll () {
 		var winScrollTop = $(window).scrollTop();
 		$(window).bind('scroll',function () {
@@ -56,25 +60,63 @@ $('.meddle_column__exampels').slick({
 		$(window).unbind('scroll');
 	}
 
+<<<<<<< HEAD
+=======
+=======
+	const disableScroll = function(){
+		$('html').on('wheel', function(){
+		return false;
+		});
+	}
+
+	const enableScroll = function(){
+		$('html').off('wheel');
+	}
+>>>>>>> dbd8676f5ec86879eb99fda33adb2f0b8ef602d2
+>>>>>>> 0cc58f0c7f5a3297ea8d04c076bd3664a734ea43
 
 	$('html, body').on('click',
 		'.call, .right-infa_phone-heder, .top-column__person-data_button, .meddle_column__button, .general_button, .footer-button', 
 		function(){
 		$('input').val('')
 		$('.number-phone').val('8')
+<<<<<<< HEAD
 		$('.form-container').fadeIn({start: OffScroll, duration: 400})
+=======
+<<<<<<< HEAD
+		$('.form-container').fadeIn({start: OffScroll, duration: 400})
+=======
+		$('.form-container').fadeIn({start: disableScroll, duration: 400})
+>>>>>>> dbd8676f5ec86879eb99fda33adb2f0b8ef602d2
+>>>>>>> 0cc58f0c7f5a3297ea8d04c076bd3664a734ea43
 
 	});
 	
 	$('.form-container__button').on('click', function(){
 		$('input').val('')
 		$('.number-phone').val('8')
+<<<<<<< HEAD
 		$('.form-container').fadeOut({start: OnScroll, duration: 400})
+=======
+<<<<<<< HEAD
+		$('.form-container').fadeOut({start: OnScroll, duration: 400})
+=======
+		$('.form-container').fadeOut({start: enableScroll, duration: 400})
+>>>>>>> dbd8676f5ec86879eb99fda33adb2f0b8ef602d2
+>>>>>>> 0cc58f0c7f5a3297ea8d04c076bd3664a734ea43
 	});
 
 	$('.form-container').click(function(event){
 		if(event.target == this){
+<<<<<<< HEAD
 			$(this).fadeOut({start: OnScroll, duration: 400})
+=======
+<<<<<<< HEAD
+			$(this).fadeOut({start: OnScroll, duration: 400})
+=======
+			$(this).fadeOut({start: enableScroll, duration: 400})
+>>>>>>> dbd8676f5ec86879eb99fda33adb2f0b8ef602d2
+>>>>>>> 0cc58f0c7f5a3297ea8d04c076bd3664a734ea43
 
 		}
 	});

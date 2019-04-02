@@ -47,34 +47,34 @@ $('.meddle_column__exampels').slick({
 		}
 
 	});
-	const disableScroll = function(){
-		$('html').on('wheel', function(){
-		return false;
-		});
+	function OffScroll () {
+		var winScrollTop = $(window).scrollTop();
+		$(window).bind('scroll',function () {
+		$(window).scrollTop(winScrollTop);
+	});}
+		function OnScroll () {
+		$(window).unbind('scroll');
 	}
 
-	const enableScroll = function(){
-		$('html').off('wheel');
-	}
 
 	$('html, body').on('click',
 		'.call, .right-infa_phone-heder, .top-column__person-data_button, .meddle_column__button, .general_button, .footer-button', 
 		function(){
 		$('input').val('')
-		$('.number-phone').val('+7')
-		$('.form-container').fadeIn({start: disableScroll, duration: 400})
+		$('.number-phone').val('8')
+		$('.form-container').fadeIn({start: OffScroll, duration: 400})
 
 	});
 	
 	$('.form-container__button').on('click', function(){
 		$('input').val('')
-		$('.number-phone').val('+7')
-		$('.form-container').fadeOut({start: enableScroll, duration: 400})
+		$('.number-phone').val('8')
+		$('.form-container').fadeOut({start: OnScroll, duration: 400})
 	});
 
 	$('.form-container').click(function(event){
 		if(event.target == this){
-			$(this).fadeOut({start: enableScroll, duration: 400})
+			$(this).fadeOut({start: OnScroll, duration: 400})
 
 		}
 	});
